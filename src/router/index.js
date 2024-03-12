@@ -6,7 +6,8 @@ const MapRouter = () => {
   return (
     <Fragment>
       <Routes>
-        <Route index path={"/Platform/design/"} element={<Design />} />
+        <Route path="/Platform/" index element={<h1>Home</h1>} />
+        <Route path={"/Platform/design/"} element={<Design />} />
       </Routes>
     </Fragment>
   );
