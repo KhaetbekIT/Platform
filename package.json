@@ -24,7 +24,7 @@
   "scripts": {
     "start": "concurrently \"npx json-server --watch db/db.json --port=9000\" \"react-app-rewired start\"",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b production -d build",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
