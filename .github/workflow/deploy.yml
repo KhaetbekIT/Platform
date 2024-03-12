@@ -1,0 +1,22 @@
+name: 🚀 Deploy website
+
+on:
+  push:
+    branches:
+      - gh-page
+  pull_request:
+    branches:
+      - gh-page
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+      
+    - name: 🔨 Build Project
+      run: |
+        npm ci
+        npm run deploy
